@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>
+        {% block title%}
+            
+        {%endblock%}
+        | Van De
+    </title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/css/styles.css'%}">
+</head>
+
+
+
+<body>
+    <!--Cabecera de la pagina-->
+        <header>
+        <div id="logotipo">
+            <!--Logo x-->
+            <img src="{% static 'images/logo.png' %}"/>
+            </div>
+
+    </header>
+    
+    <nav>
+        <ul>
+            <li>
+                <a href="/">Inicio</a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="/pagina">Pagina</a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="/hola-mundo">Hola Mundo</a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="/contactos">Contactos</a>
+            </li>
+        </ul>
+
+    </nav>
+    
+
+    <div id ="content">
+        <h2 class="title"> Titulo prueba</h2>
+        {%block content%}
+
+        <!--Codigo que viene de template-->
+
+        {%endblock%}
+    </div>
+    
+    <footer> Master en pyton &copy; Pablo Vandecaveye</footer>
+</body>
+
+</html>

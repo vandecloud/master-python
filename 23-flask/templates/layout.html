@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang = "es">
+    <head>
+        <meta charset="utf-8" />
+
+        <title>{% block title %} |Desafio cut URL  {% endblock title %}</title>
+       <link rel = "stylesheet" href="{{url_for('static', filename = 'css/style.css')}}"/>
+
+
+    </body>
+        <h1> Bienvenido desafio recortando URl<h1>
+        <hr/>
+            <ul>
+                <li>
+                    <a href="/">Inicio</a>
+                </li>
+                <li>
+                    <a href="{{url_for('coches')}}">Listados de Coche</a>
+                </li>
+                 <li>
+                    <a href="{{url_for('crear_coche')}}">Crear coche</a>
+                </li>
+                <li>
+                    <a href="{{url_for('stats')}}">Stats</a>
+                </li>
+                <li>
+                    <a href="{{url_for('tools')}}">Tools</a>
+                </li>
+            </ul>
+        <hr/>
+
+
+        <section id = "content">
+            {%block content %}
+
+            {%endblock%}
+        </section>
+        <hr/>
+        <footer>
+            Recortando url con Pablo Vandecaveye - {{now.month}} / {{now.year}}
+        </footer>
+
+    </body>
+</html>

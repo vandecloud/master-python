@@ -1,0 +1,16 @@
+<hr/>
+<br/>
+<h1> Esto pertenece a un include </h1>
+<hr/>
+<h1>{{saludo}}: {{nombre}}</h1>
+<h1> Fecha Actual 2021 </h1>
+
+
+<ul>
+    {% for year in years%}
+        {%if year|divisibleby:2 == True %}
+            <li> {{year}} </li>
+        {%endif%}
+    {%endfor%}
+</ul>
+<hr/>

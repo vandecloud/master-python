@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block title %} 
+    Coches 
+    {{ super () }}
+{% endblock title %} 
+
+    |Desafio cut URL
+    
+{% block content %}
+
+     <h1>Lista de coches cargados<h1>
+    
+    {% for coche in coches%}
+        <article class = "article-item">
+
+            <div class= "date">
+                <h2>
+                    <a href="">
+                    {{coche.1}}
+                  
+                    </a>
+                </h2>
+
+                <span class = "date">
+                    {{coche.2}}
+                    {{coche.3}}
+                </span>
+
+                <p>
+                    {{coche.4|safe}}
+                </p>
+                 
+            </div>
+        </article> 
+    {%endfor%}
+
+{% endblock content %}
+      

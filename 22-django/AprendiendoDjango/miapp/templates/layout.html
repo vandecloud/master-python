@@ -1,0 +1,69 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>
+        {%block title%}
+        
+        {%endblock%}
+        | Pablo Vandecaveye     
+    </title>
+    
+    <link rel="stylesheet" type="text/css" href="{%static 'css/styles.css'%}"/>
+</head>
+<body>
+    <!--Cabecera de la pagina-->
+    <header>
+        <div id="logo">
+            <img src="../static/images/logo.png"/>
+                <!--Logo van de granja-->
+            <h1>Sitio Web con Django</h1>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="{% url 'inicio'%}"> Inicio </a> 
+            </li>
+        
+            <li> 
+                <a href="{% url 'hola_mundo'%}"> Hola Mundo </a>
+            </li>
+        
+            <li> 
+                <a href="{% url 'pagina'%}"> Pagina de Pruebas </a>
+            </li>
+        
+            <li> 
+                <a href="{%url 'contacto' 'pablo' 'Vandecaveye'%}"> Pagina de Contactos </a>
+            </li>
+        
+        </ul>
+    </nav>   
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+
+    </div>
+    
+    <div id="content">
+        <div class="box">
+            <h2 class="title">Titulo Prueba</h2>
+            {%block content%}
+            <!--Codigo que viene de templates-->
+            <strong>Contenido del Bloque Original</strong>
+            {%endblock%}
+        </div>
+       
+    </div>
+  
+
+    <footer>
+            Master en python &copy; Pablo Vandecaveye WEB - {% now "Y-m-d" %}
+    </footer>
+</body>
+</html>

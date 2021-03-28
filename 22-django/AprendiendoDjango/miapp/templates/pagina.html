@@ -1,0 +1,30 @@
+{%extends 'layout.html'%}
+
+{%block title%}Pagina{%endblock%}
+
+{%block content%}
+<h1 class="title">  Pagina de Prueba </h1>
+
+<h2> Trabajando con filtros, son funciones que podemos aplicar a los template </h2>
+<br/>
+<p>{{'Creado por Pablo Vandecaveye'}}</p>
+
+<br/> <h3> Fitro para sacar los espacios "Cut"</h3>
+<br/>
+<p>{{'Creado por Pablo Vandecaveye' |cut:" "}}</p>
+
+<br/> <p> Fitro para sacar letras "e"</p>
+<br/>
+<p>{{'Creado por Pablo Vandecaveye' |cut:"e"}}</p>
+<br/>
+<h3> Filtro <strong> default </strong> </h3>
+<br/> 
+<p> En caso de querer mostrar informacion de una variable de nuestras vistas <br/>
+podemos usar esta funcion y en el caso de que la varible este vacia mostrar un texto por defecto</p>
+<br/>
+<p>{{texto |default:"No hay nada"}}</p>
+
+{%load filters%}
+{{"Vandecaveye"|saludo|safe }}
+
+{%endblock%}

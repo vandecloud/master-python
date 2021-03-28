@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+
+
+{%block title%} Hola Mundo {%endblock%}
+
+{%block content%}
+    {{block.super}} <!--heredar el contenido del bloque padre (layout.html)-->
+    <h3 class="title">Soy Pablo Vandecaveye</h3>
+{%endblock%}
